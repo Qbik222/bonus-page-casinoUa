@@ -294,8 +294,16 @@ body
           flex-direction: column
           gap: 25px
           margin-top: 30px
-          max-height: 600px
+          max-height: 300px
           overflow-y: auto
+          &::-webkit-scrollbar
+            background-color: $dark-blue
+            width: 4px
+            border-radius: 50px
+          &::-webkit-scrollbar-thumb
+            width: 4px
+            border-radius: 50px
+            background-color: $table-border
           &-item
             font-size: 16px
             line-height: 20px
