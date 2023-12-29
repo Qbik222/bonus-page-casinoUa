@@ -15,6 +15,7 @@ $font-gilroy-med: Gilroy-Medium, sans-serif
 $font-gilroy-bold: Gilroy-Bold, sans-serif
 $font-gilroy-semibold: Gilroy-Semibold, sans-serif
 $font-gilroy-black: Gilroy-Black, sans-serif
+$fonr-SFUIDisplay-black: SFUIDisplay-Black, sans-serif
 
 body
   overscroll-behavior: none
@@ -30,6 +31,8 @@ body
   overflow-x: hidden
   padding: 20px
   color: white
+  #currencySign
+    font-family: $fonr-SFUIDisplay-black
   .banner
     display: flex
     border-radius: 10px
@@ -268,6 +271,7 @@ body
           cursor: pointer
           position: relative
           list-style: none
+          list-style-image: none
           height: 55px
           background: $table-head-bg
           border-radius: 5px
