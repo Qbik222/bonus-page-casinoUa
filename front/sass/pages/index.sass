@@ -17,6 +17,7 @@ $font-gilroy-semibold: Gilroy-Semibold, sans-serif
 $font-gilroy-black: Gilroy-Black, sans-serif
 $fonr-SFUIDisplay-black: SFUIDisplay-Black, sans-serif
 
+
 body
   overscroll-behavior: none
   img
@@ -79,7 +80,7 @@ body
           font-family: $font-gilroy-bold
       &-wrap
         display: flex
-        align-items: center
+        align-items: flex-start
         justify-content: space-around
         width: 100%
         .casino__info-item
@@ -87,7 +88,6 @@ body
           flex-direction: column
           align-items: center
           width: 280px
-          height: 225px
           &:nth-child(4)
             br:nth-child(1)
               display: none
@@ -184,7 +184,7 @@ body
         border: 2px solid $table-border
         margin-top: 40px
         &:before
-          content: "1 Спін = 1 ₴"
+          content: "1 Spin = 1 ₴"
           color: $white
           font-family: $font-gilroy-black
           font-size: 16px
@@ -265,7 +265,7 @@ body
         summary::-webkit-details-marker
           display: none
         > summary
-          list-style: none
+            list-style: none
         .rules__btn
           cursor: pointer
           position: relative
@@ -275,10 +275,10 @@ body
           border-radius: 5px
           display: flex
           align-items: center
-          padding-left: 15px
           text-transform: uppercase
           color: $white
           font-size: 18px
+          padding: 15px
           &::before
             content: ""
             background: url("../img/arrow.svg") no-repeat 0 0/cover
@@ -304,9 +304,10 @@ body
             width: 4px
             border-radius: 50px
           &::-webkit-scrollbar-thumb
+            background-color: $table-border
             width: 4px
             border-radius: 50px
-            background-color: $table-border
+
           &-item
             font-size: 16px
             line-height: 20px
@@ -317,6 +318,35 @@ body
           .sub-item2
             padding-left: 20px
 
+.en
+  .banner
+    &__text
+      font-family: $font-gilroy-black
+      max-width: 760px
+      span
+        color: $green
+      br:nth-child(1), br:nth-child(3)
+        display: none
+      span:nth-child(7)
+        font-size: 27px
+        font-family: $font-gilroy-bold
+
+.table-container
+  table
+    width: 100%
+    border-collapse: collapse
+    th, td
+      border: 1px solid $table-border
+      padding: 5px
+      text-align: center
+      font-family: $font-gilroy-reg
+    th
+      width: 100px
+    tbody
+      tr
+        td
+          width: calc(100% - 100px)
+
 
 @media screen and (max-width: 1024px)
   .banner
@@ -326,26 +356,6 @@ body
       background: url("../img/bonus-bg-tablet.png") no-repeat 50% 100%/cover
     &__spins
       background: url("../img/spins-bg-tab.png") no-repeat 50% 30%/cover
-
-
-.table-container
-  table
-    width: 100%
-    border-collapse: collapse
-
-    th, td
-      border: 1px solid $table-border
-      padding: 10px
-      text-align: center
-      font-family: $font-gilroy-reg
-
-    th
-      width: 100px
-
-    tbody
-      tr
-        td
-          width: calc(100% - 100px)
 
 @media screen and (max-width: 650px)
   .banner

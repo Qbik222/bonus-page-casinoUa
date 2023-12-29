@@ -1,8 +1,8 @@
 @media screen and (min-width: 2200px)
-.bonus__page
-    .casino
-      &__spins
-        background-position: 50% 40%
+  .bonus__page
+      .casino
+        &__spins
+          background-position: 50% 40%
 
 @media screen and (max-width: 1600px)
   .bonus__page
@@ -64,6 +64,12 @@
       &__spins
         .casino__btn
           background: $btn-hover-bg
+  .en
+    .banner
+      &__text
+          span
+            br:nth-child(2)
+              display: block
 
 @media screen and (max-width: 800px)
   .bonus__page
@@ -77,6 +83,14 @@
         background-size: 110%
       &__spins
         background-position: 50% 0%
+  .en
+    .casino
+      .rules
+        &__wrap
+          .rules__btn
+              span
+                font-size: 14px
+                line-height: 16px
 @media screen and (max-width: 650px)
   .bonus__page
     padding: 10px
@@ -206,7 +220,17 @@
               top: 25px
             span
               max-width: 310px
-              line-height: 20px
+              font-size: 12px
+              line-height: 14px
+  .en
+    .casino
+      .rules
+        &__wrap
+          .rules__btn
+            span
+              font-size: 11px
+              line-height: 14px
+              max-width: 260px
   .table-container
     overflow-x: auto
     max-width: 600px
@@ -258,5 +282,11 @@
         &__wrap
           .rules__btn
             span
-              font-size: 15px
-              max-width: 260px
+              font-size: 9px
+              line-height: 14px
+              max-width: 240px
+  .table-container
+    min-height: 270px
+    table
+      th, td
+        font-size: 12px
