@@ -267,6 +267,10 @@ body
       .rules__wrap[open] .rules__btn::before
         transform: translateY(-50%) rotate(0deg)
       &__wrap
+        summary::-webkit-details-marker
+          display: none
+        > summary
+          list-style: none
         .rules__btn
           cursor: pointer
           position: relative
